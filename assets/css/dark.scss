@@ -1,0 +1,1261 @@
+/*================================================
+Default CSS
+=================================================*/
+$main-color: #1967d2;
+$white-color: #ffffff;
+$black-color: #000000;
+
+// Switch css
+.switch-box {
+    position: fixed;
+    z-index: 1;
+    left: 3%;
+    bottom: 63px;
+    z-index: 999;
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+
+        input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #cbc1c1;
+        transition: 0.4s;
+
+        &:before {
+            position: absolute;
+            content: "\f119";
+            font-family: flaticon !important;
+            color: $black-color;
+            font-size: 21px;
+            text-align: center;
+            top: 2px;
+            left: 8px;
+            height: 30px;
+            width: 30px;
+            left: 2.5px;
+            bottom: 1px;
+            top: 0;
+            margin: auto 0;
+            background-color: $white-color;
+            transition: 0.4s;
+        }
+    }
+    input:checked + .slider {
+        background-color: #cbc1c1;
+    }
+    input:focus + .slider {
+        background-color: #cbc1c1;
+    }
+    input:checked + .slider:before {
+        content: "\f109";
+        transform: translateX(24px);
+
+    }
+    .slider {
+        &.round {
+            border-radius: 50px;
+
+            &:before {
+                border-radius: 50%;
+            } 
+        }
+    }
+}
+
+// Dark Style CSS
+.theme-dark {
+    body {
+        background-color: #000000;
+        color: #f1f1f1;
+    }
+    p {
+        color: #f1f1f1;
+        
+        a {
+            color: #f1f1f1 !important;
+        }
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+        color: $white-color !important;
+
+        a {
+            color: $white-color !important;
+        }
+    }
+
+    .bg-f0f4fc {
+        background-color: #181818;
+    }
+    .bg-f0f5f7{
+        background-color: #181818;
+    }
+    .form-control {
+        border: 1px solid #434343;
+        background-color: #080808;
+        color: $white-color;
+        
+        &::placeholder {
+            color: $white-color;
+        }
+        &:focus {
+            &::placeholder {
+                color: transparent;
+                border-color: $main-color;
+            }
+        }
+    }
+
+    .navbar-area {
+        background-color: #0e0e0e;
+        &.style2 {
+            background-color: transparent;
+            &.is-sticky {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+    .desktop-nav {
+        .navbar-brand {
+            .main-logo {
+                display: none;
+            }
+            .white-logo {
+                display: block;
+            }
+        }
+        
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    a {
+                        color: $white-color;
+                        &:hover, &:focus, &.active {
+                            color: $main-color;
+                        }
+                    }
+                    .dropdown-menu {
+                        li {
+                            a {
+                                color: $black-color;
+                                &:hover, &:focus, &.active {
+                                    color: $main-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .others-options {
+                .profile-nav-item {
+                    .dropdown-bs-toggle {
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                    &.dropdown {
+                        .dropdown-menu {
+                            background-color: #0e0e0e;
+                            .dropdown-header {
+                                border-color: #353434;
+                                .name {
+                                    color: $white-color;
+                                }
+                                .email {
+                                    color: $white-color;
+                                }
+                            }
+                            .dropdown-body {
+                                ul {
+                                    .nav-item {
+                                        .nav-link {
+                                            .icon {
+                                                img {
+                                                    filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(118deg) brightness(103%) contrast(102%);
+                                                }
+                                            }
+                                            span {
+                                                color: $white-color;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .dropdown-footer {
+                                border-color: #353434;
+                                ul {
+                                    .nav-link {
+                                        img {
+                                            filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(118deg) brightness(103%) contrast(102%);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    //Banner
+    .banner-area {
+        &.style2 {
+            background-color: #0e0e0e;
+        }
+    }
+    .banner-area-style3 {
+        background-color: #0e0e0e;
+        &::before {
+            background-color: $black-color;
+        }
+    }
+    .banner-search-form {
+        background-color: $black-color;
+        .form-group {
+            .form-control {
+                background-color: $black-color;
+            }
+            &::before {
+                background-color: #696666;
+            }
+        }
+    }
+    .banner-image-content {
+        .join-now {
+            background-color: $black-color;
+        }
+        .creative-agency {
+            background-color: $black-color;
+        }
+        .assisted-candidate {
+            background-color: $black-color;
+        }
+    }
+    .banner-content {
+        .trending-keywords {
+            ul {
+                li {
+                    span {
+                        color: $white-color;
+                    }
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .banner-image-content-style2 {
+        .assisted-candidate {
+            background-color: $black-color;
+        }
+        .creative-agency {
+            background-color: $black-color;
+        }
+    }
+    .page-banner-content {
+        ul {
+            li {
+                a {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Categorie
+    .single-category-card {
+        background-color: #0e0e0e;
+        .icon {
+            background-color: $black-color;
+            border: 1px solid rgba(16, 16, 16, 0.1);
+        }
+        &:hover {
+            .icon {
+                background-color: $white-color;
+            }
+        }
+    }
+    .single-categories-box {
+        background-color: #0e0e0e;
+    }
+    .categories-area {
+        &.style2 {
+            &::before {
+                background-color: $black-color;
+            }
+        }
+    }
+
+    //Job
+    .shoting-btn {
+        ul {
+            li {
+                button {
+                    color: $white-color;
+                    &:hover, &:focus, &.active {
+                        background-color: #0e0e0e;
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .single-job-card {
+        .job-content {
+            .bottom-content {
+                ul {
+                    li {
+                        h3 {
+                            color: $main-color !important;
+                            span {
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.style-2 {
+            background-color: $black-color;
+        }
+        &.style-3 {
+            background-color: #0e0e0e;
+            .job-content {
+                h3 {
+                    color: $main-color !important;
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    .recent-job-box {
+       background-color: #0e0e0e;
+    }
+    .dream-job-image {
+        .assisted-candidate {
+            background-color: $black-color;
+        }
+        .creative-agency {
+            background-color: $black-color;
+        }
+        .join-now {
+            background-color: $black-color;
+        }
+    }
+    .freelancer-details-content {
+        .works-experience {
+            ul {
+                li {
+                    border-color: rgba(199, 196, 196, 0.08);
+                }
+            }
+        }
+    }
+    .search-job-top-content {
+        .shorting-content {
+            .form-control {
+                background-color: #0e0e0e;
+            }
+        }
+    }
+    .post-job-content {
+        background-color: #0e0e0e;
+        .some-info {
+            ul {
+                li {
+                    .choose-file {
+                        label {
+                            background-color: $black-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Faq
+    .faq-accordion {
+        .accordion {
+            .accordion-content {
+                background-color: $black-color;
+            }
+            .accordion-title {
+                background-color: $black-color;
+                color: $white-color;
+            }
+        }
+    }
+
+    //Company
+    .single-company-card {
+        background-color: #0e0e0e;
+    }
+
+    //Pricing
+    .single-pricing-card {
+       background-color: #131212;
+       .pricing-top-content {
+            &::before {
+                background-color: #565555;
+            }
+       }
+    }
+
+    //Works
+    .single-works-card {
+        background-color: #0e0e0e;
+    }
+
+    //Employer
+    .single-employer-card {
+        background-color: $black-color;
+    }
+    .employers-details-top-content {
+        background-color: #0e0e0e;
+        .details-left-content {
+            .info {
+                ul {
+                    li {
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .employers-details-content {
+        .review {
+            .single-review {
+                border: 1px solid rgba(248, 248, 251, 0.08);
+            }
+        }
+    }
+    .add-review {
+        background-color: #0e0e0e;
+    }
+
+    //Sidebar
+    .single-sidebar-widget {
+        background-color: #0e0e0e;
+        &.job-overview {
+            ul {
+                li {
+                    span {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        &.owner-info {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                    span {
+                       color: $white-color;
+                    }
+                }
+            }
+        }
+        &.company-overview {
+            ul {
+                li {
+                    span {
+                        color: $white-color;
+                    }
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.range {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                        &:hover {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.location {
+            &.style2 {
+                ul {
+                    li {
+                        span {
+                            color: $white-color;
+                        }
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+        &.candidate-side-widget {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        &.categories {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+        &.tags {
+            a {
+                background-color: $black-color;
+                color: $white-color;
+                &:hover {
+                    background-color: $main-color;
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Review
+    .single-reviews-card {
+        background-color: #060505;
+    }
+    .single-review-box {
+        background-color: $black-color;
+    }
+
+    //Counter
+    .counter-area {
+        &::before {
+            background-color: #181818;
+        }
+    }
+    .single-counter-item {
+        &.style-2{
+            p {
+                color: $white-color;
+            }
+        }
+    }
+
+    //CV
+    .cv-img-area {
+        .inbox {
+            background-color: #0e0e0e;
+        }
+    }
+
+    //Job
+    .job-listing-search-form {
+        background-color: #0e0e0e;
+        .form-group {
+            .form-control {
+                background-color: #0e0e0e;
+                color: $white-color;
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    .search-job-top-content {
+        .shoing-content {
+            color: $white-color;
+        }
+    }
+
+    //Partner
+    .parner-logo {
+        img {
+            filter: invert(1);
+        }
+    }
+    .cv-img-area-style2 {
+        .candidate-content {
+            background-color: #111111;
+            p {
+                color: $white-color;
+            }
+        }
+    }
+
+    //Pagination
+    .paginations {
+        ul {
+            li {
+                a {
+                    color: $white-color;
+                    border-color: #6b6b6b;
+                }
+            }
+        }
+        &.style2 {
+            ul {
+                li {
+                    a {
+                        background-color: $black-color;
+                        &:hover, &.active {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Contact
+    .single-contact-info-box {
+        background-color: #0e0e0e;
+        .info-content {
+            a {
+                color: $white-color;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+    .contact-form {
+        background-color: #040303;
+    }
+    //Team
+    .single-team-card {
+        background-color: #0e0e0e;
+    }
+    //Candidate
+    .candidates-details-content {
+        .works-experience {
+            ul {
+                li {
+                    border-bottom: 1px solid rgba(181, 182, 185, 0.08);
+                }
+            }
+        }
+    }
+    .candidates-details-left-content {
+        .info {
+            ul {
+                li {
+                    a {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+
+    //Freelancer
+    .single-freelancer-card {
+        background-color: #0a0909;
+    }
+    .single-freelancer-box {
+        background-color: #0e0e0e;
+    }
+    .freelancer-details-content {
+        .freelancer-top-content {
+            .single-freelancer-card {
+                background-color: unset;
+            }
+        }
+    }
+
+    //Blog
+    .single-blog-card {
+        .blog-content {
+            .info-list {
+                ul {
+                    li {
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+            h2 {
+                a {
+                    &:hover {
+                        color: $main-color !important;
+                    }
+                }
+            }
+            .read-more {
+                color: $main-color;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+        &.style3 {
+            background-color: #0e0e0e;
+        }
+    }
+    .blog-details {
+        .blog-details-top-content {
+            .info{
+                ul {
+                    li {
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+        .quote {
+            background-color: #0e0e0e;
+            p {
+                color: $white-color;
+            }
+        }
+        .tag-and-share {
+            background-color: #0e0e0e;
+            .tags {
+                ul {
+                    li {
+                        a {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+        .reply-content {
+            background-color: #0e0e0e;
+        }
+    }
+
+    //User
+    .login {
+       background-color: #0e0e0e;
+    }
+    .register {
+        background-color: #0e0e0e;
+    }
+    .password {
+       background-color: #0e0e0e;
+    }
+
+    //Privacy
+    .privacy-content {
+        .list {
+            ul {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+    //Condition
+    .condition-content {
+        .list {
+            ul {
+                li {
+                    color: $white-color;
+                }
+            }
+        }
+    }
+
+    //Coming Soon
+    .coming-soon-area {
+        &::before {
+            background-color: #0e0e0e;
+        }
+    }
+    .coming-soon-counter {
+        border: 30px solid #0b0b0b;
+        background-color: #0e0e0e;
+        &::before {
+            border: 1px solid #525151;
+        }
+        .list {
+            ul {
+                li {
+                    color: $main-color;
+                    span {
+                    color: $white-color;
+                    }
+                    &::before {
+                        background-color: $white-color;
+                    }
+                    &::after {
+                        background-color: $white-color;
+                    }
+                }
+            }
+        }
+
+    }
+    .coming-soon-content {
+        .top-content {
+            .coming-soon-logo {
+                .logo-2 {
+                    display: block;
+                    margin: auto;
+                }
+                .logo-1 {
+                    display: none;
+                }
+            }
+        }
+        .newsletter-form {
+            .form-control {
+                background-color: #0e0e0e;
+                color: $white-color;
+                &::placeholder {
+                    color: $white-color;
+                }
+            }
+        }
+        .social-links {
+            ul {
+                li {
+                    a {
+                        background-color: #0e0e0e;
+                        border: 1px solid #4b4a4a;
+                        &:hover {
+                            background-color: $main-color;
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*
+    DaseBoard Style
+    ======================================================*/
+    .main-dashboard-content {
+        background-color: #181818;
+    }
+    .breadcrumb-area {
+        .breadcrumb {
+            .item {
+                color: $white-color;
+                a {
+                    color: $white-color;
+                }
+                i {
+                    color: $white-color;
+                }
+                &:last-child {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+
+    //Recent Box
+    .recent-notifications-box {
+        background-color: $black-color;
+        h3 {
+            border-color: #1b1a1a;
+        }
+        ul {
+            li {
+                border-color:#0e0e0e;
+                color: $white-color;
+                span {
+                    color: #929191;
+                }
+                .close {
+                    span {
+                        color: #ff0000;
+                    }
+                }
+                &:hover {
+                    background-color: #1f1e1e;
+                }
+            }
+        }
+    }
+    
+    //Invoice
+    .invoices-box {
+        background-color: $black-color;
+        h3 {
+            border-color: #1b1a1a;
+        }
+        ul {
+            li {
+                border-color: #0e0e0e;
+                span {
+                    color: $white-color;
+                }
+                &:hover {
+                    background-color: #1f1e1e;
+                }
+                ul {
+                    li {
+                        color: $white-color;
+                    }
+                }
+            }
+        }
+    }
+    /*Sidemenu CSS*/
+    .sidemenu-area {
+        background: #000000;
+        .sidemenu-header {
+            background: #000000;
+        }
+        .sidemenu-body {
+            background: #000000;
+            .sidemenu-nav {
+                .nav-item {
+                    .nav-link {
+                        color: $white-color;
+                        .icon {
+                            color: $white-color;
+                            img {
+                                filter: invert(100%) sepia(100%) saturate(1%) hue-rotate(118deg) brightness(103%) contrast(102%);
+                            }
+                        }
+                        &:hover {
+                            background-color: #181818;
+                            color: $main-color;
+                            .icon {
+                                transform: rotateY(-180deg);
+                                color: $main-color;
+                                img {
+                                    filter: invert(33%) sepia(47%) saturate(3411%) hue-rotate(204deg) brightness(85%) contrast(93%);
+                                }
+                            }
+                        }
+                    }
+                    &.active {
+                        .nav-link {
+                            background-color: #181818;
+                            color: $main-color;
+                            .icon {
+                                color: $main-color;
+                                img {
+                                    filter: invert(33%) sepia(47%) saturate(3411%) hue-rotate(204deg) brightness(85%) contrast(93%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Post Job
+    .daseboard-post-job-content {
+        background-color: $black-color;
+        h3 {
+            border-bottom: 1px solid #525252;
+        }
+        .post-job-form {
+            .form-group {
+                label {
+                    color: $white-color;
+                }
+                .form-control {
+                    background-color: #0e0e0e;
+                }
+            }
+        }
+    }
+
+    //Manage Job
+    .listing {
+        background-color: $black-color;
+    }
+    .manage-jobs-box {
+        background-color: $black-color;
+        .manage-jobs-table {
+            table {
+                tbody {
+                    tr {
+                        border-color: #0e0e0e;
+                        td {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Manage Applicants
+    .manage-applicants-area {
+        .applicants-found {
+            background-color: #080808;
+            .left-content {
+                color: $white-color;
+            }
+        }
+    }
+    .single-applicants-card {
+        background-color: $black-color;
+    }
+
+    //Bookmark
+    .applied-shorting-content {
+        .shorting-right-content {
+            .form-control {
+                background-color: $black-color;
+            }
+        }
+    }
+    .applied-jobs-box {
+        .applied-jobs-table {
+            background-color: $black-color;
+            table {
+                tbody {
+                    tr {
+                        border-color: #0e0e0e;
+                        td {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Manage Resum
+    .manage-resum-area {
+        background-color: $black-color;
+        .manage-resum-table {
+            table {
+                tbody {
+                    tr {
+                        border-color: #0e0e0e;
+                        td {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Create Resum Box
+    .create-resumes-box {
+        background-color: $black-color;
+        h3 {
+           border-color: #222222;
+        }
+        .create-content {
+            .resume-form {
+                .form-group {
+                    label {
+                        color: $white-color;
+                    }
+                    .form-control {
+                        background-color: #0e0e0e;
+                    }
+                }
+            }
+        }
+    }
+    .details-form-content {
+        background-color: $black-color;
+        h3 {
+            border-color: #222222;
+        }
+        .form-content {
+            .form-group {
+                label {
+                    color: $white-color;
+                }
+                .form-control {
+                    background-color: #0e0e0e;
+                }
+            }
+        }
+    }
+
+    //Job Alert
+    .alert-jobs-box {
+        .alert-jobs-table {
+            background-color: $black-color;
+            table {
+                tbody {
+                    tr {
+                        border-color: #0e0e0e;
+                        td {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Package
+    .package-box {
+        .manage-resum-table {
+            background-color: $black-color;
+            table {
+                tbody {
+                    tr {
+                        border-color: #0e0e0e;
+                        td {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //Massage
+    .massage-area {
+        background-color: $black-color;
+        .massage-top-content {
+            border-color: #212121;
+        }
+    }
+    .massage-left-sidebar {
+        ul {
+            li {
+                border-color: #212121;
+            }
+        }
+    }
+    .chat-box {
+        .chat-list {
+            li {
+                .chating-left-style {
+                    .chat-body {
+                        background-color: #0e0e0e;
+                        &::before {
+                            background-color: #0e0e0e;
+                        }
+                    }
+                }
+                .chating-right-style {
+                    .chat-body {
+                        background-color: #0e0e0e;
+                        &::before {
+                            background-color: #0e0e0e;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //My Profile
+    .my-profile-area {
+        .profile-form-content {
+            background-color: $black-color;
+            h3 {
+                border-color: #0e0e0e;
+            }
+            .profile-form {
+                .form-group {
+                    label {
+                        color: $white-color;
+                    }
+                    .form-control {
+                        background-color: #0e0e0e;
+                    }
+                }
+            }
+        }
+    }
+
+    //Password
+    .chainge-password-box {
+        background-color: $black-color;
+        h3 {
+            border-color: #0e0e0e;
+        }
+        .password-form {
+            .form-group {
+                label {
+                    color: $white-color;
+                }
+                .form-control {
+                    background-color: #0e0e0e;
+                }
+            }
+        }
+    }
+        
+    
+
+
+
+@media only screen and (max-width: 991px) {
+    .navbar-area {
+        &.style2 {
+            background-color: #1a1919;
+        }
+    }
+    .mobile-responsive-nav {
+        .mobile-responsive-menu {
+            .logo {
+               .white-logo {
+                    display: block;
+               }
+               .main-logo {
+                    display: none;
+               }
+            }
+            &.mean-container {
+                .mean-nav {
+                    ul {
+                        background-color: #090909;
+                        li {
+                            a {
+                                color: $white-color !important;
+                                border-top: 1px solid rgba(86, 85, 85, 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+}
+
+
+
+
+
