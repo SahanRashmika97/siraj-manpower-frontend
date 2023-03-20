@@ -1,0 +1,18 @@
+### Rewrite Rules Added by CyberPanel Rewrite Rule Generator
+
+RewriteEngine On
+RewriteCond %{HTTPS}  !=on
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+ErrorDocument 404 https://localhost/siraj/404.php
+
+### End CyberPanel Generated Rules.
+
+ReWriteEngine On
+RewriteRule ^home?$  index.php
+RewriteRule ^aboutus?$  aboutus.php
+RewriteRule ^contact?$  contact.php
+RewriteRule ^vacancies?$  vacancies.php
+RewriteRule ^404?$  404.php
+RewriteRule ^apply?$  apply.php
+RewriteRule ^blog?$  blog.php
+RewriteRule ^login?$  https://portal.sirajmanpower.lk/
